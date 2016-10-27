@@ -8,6 +8,7 @@
     "encrypt": "node scripts/encrypt",
     "frontend": "node scripts/frontend",
     "elmu-meroallas": "nightwatch tests/elmu-meroallas.js",
+    "fogaz-meroallas": "nightwatch tests/fogaz-meroallas.js",
     "precommit": "npm run lint"
   },
   "author": "Szabolcs Kurdi",

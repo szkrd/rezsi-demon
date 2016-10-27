@@ -22,7 +22,7 @@ module.exports = {
     client
         .pause(1000)
         .useXpath()
-        .click('//span[contains(text(),"Mérőállás bejelentés")]/..') // button in the sidbear, the topmost menu is crappy
+        .click('//span[contains(text(),"Mérőállás bejelentés")]/..') // button in the sidebar, the topmost menu is crappy
         .useCss()
         .waitForElementVisible('td.urBorderBox input[type=text]', 15000) // the first non-readonly textinput
   },
