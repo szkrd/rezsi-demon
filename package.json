@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint scripts tests utils",
     "encrypt": "node scripts/encrypt",
-    "elmu-meroallas": "nightwatch tests/elmu-meroallas.js"
+    "elmu-meroallas": "nightwatch tests/elmu-meroallas.js",
+    "precommit": "npm run lint"
   },
   "author": "Szabolcs Kurdi",
   "license": "MIT",
@@ -19,6 +20,7 @@
     "eslint": "3.8.1",
     "eslint-config-standard": "6.2.1",
     "eslint-plugin-promise": "3.3.0",
-    "eslint-plugin-standard": "2.0.1"
+    "eslint-plugin-standard": "2.0.1",
+    "husky": "0.11.9"
   }
 }
