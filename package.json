@@ -1,0 +1,24 @@
+{
+  "name": "rezsi-demon",
+  "version": "0.0.1",
+  "description": "Report electricity/gas/water meter, pay for electricity and the rest.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint scripts tests utils",
+    "encrypt": "node scripts/encrypt",
+    "elmu-meroallas": "nightwatch tests/elmu-meroallas.js"
+  },
+  "author": "Szabolcs Kurdi",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "2.24.1",
+    "nightwatch": "0.9.8"
+  },
+  "devDependencies": {
+    "dotenv": "2.0.0",
+    "eslint": "3.8.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.3.0",
+    "eslint-plugin-standard": "2.0.1"
+  }
+}
