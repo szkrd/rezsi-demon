@@ -21,11 +21,9 @@ module.exports = {
   'navigate to meter report page': function (client) {
     client
         .pause(1000)
-        .click('a[title="Mérőállás"]') // not kidding
-        .click('a[title="Mérőállás"]')
-        .click('a[title="Mérőállás"]')
-        .pause(1000)
-        .click('a[title="Mérőállás bejelentése"]')
+        .useXpath()
+        .click('//span[contains(text(),"Mérőállás bejelentés")]/..') // button in the sidbear, the topmost menu is crappy
+        .useCss()
         .waitForElementVisible('td.urBorderBox input[type=text]', 15000) // the first non-readonly textinput
   },
   'fill the current meter value and submit the form': function (client) {
