@@ -8,7 +8,7 @@ module.exports = {
     client
         .url('https://ker.elmuemaszenergiaszolgaltato.hu/')
         .waitForElementVisible('body', 5000)
-        .waitForElementVisible('input#pLoginName', 1000)
+        .waitForElementVisible('input#pLoginName', 5000)
   },
   'login': function (client) {
     client
@@ -16,14 +16,17 @@ module.exports = {
         .setValue('input#pPassword', config.elmu.password)
         .click('button#pLoginButton')
         .waitForElementVisible('#pCountdown', 5000) // the so called "Idozar" countdown in the upper right corner
-        .waitForElementVisible('a[title="Mérőállás"]', 10000)
+        .waitForElementVisible('a[title="Mérőállás"]', 15000)
   },
   'navigate to meter report page': function (client) {
     client
+        .pause(1000)
+        .click('a[title="Mérőállás"]') // not kidding
+        .click('a[title="Mérőállás"]')
         .click('a[title="Mérőállás"]')
         .pause(1000)
         .click('a[title="Mérőállás bejelentése"]')
-        .waitForElementVisible('td.urBorderBox input[type=text]', 10000) // the first non-readonly textinput
+        .waitForElementVisible('td.urBorderBox input[type=text]', 15000) // the first non-readonly textinput
   },
   'fill the current meter value and submit the form': function (client) {
     client
@@ -33,7 +36,7 @@ module.exports = {
         .useXpath()
         .click('//a/span[text()="Rögzítés"]/..')
         .useCss()
-        .pause(10000)
+        .pause(5000)
         .end()
   }
 }
