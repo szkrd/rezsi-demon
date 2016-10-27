@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint scripts tests utils",
     "encrypt": "node scripts/encrypt",
+    "frontend": "node scripts/frontend",
     "elmu-meroallas": "nightwatch tests/elmu-meroallas.js",
     "precommit": "npm run lint"
   },
@@ -13,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "chromedriver": "2.24.1",
-    "nightwatch": "0.9.8"
+    "nightwatch": "0.9.8",
+    "readline-sync": "1.4.4"
   },
   "devDependencies": {
     "dotenv": "2.0.0",
