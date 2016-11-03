@@ -9,7 +9,7 @@
 1. `npm i`
 2. create a dotenv file
 3. store passwords in an encrypted form (`SECRET=H3110W0r1d npm run encrypt -- fooBarBaz`)
-4. may want to use the `export HISTCONTROL=ignoredups` (ignore duplicates and commands starting with a space)
+4. may want to use the `export HISTCONTROL=ignoreboth` (ignore duplicates and commands starting with a space)
    sane setting + encrypt your home folder
 
 ## .env example
