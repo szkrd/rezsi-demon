@@ -14,8 +14,9 @@ module.exports = {
     client
         .setValue('input#pLoginName', config.elmu.userName)
         .setValue('input#pPassword', config.elmu.password)
+        .pause(2000)
         .click('button#pLoginButton')
-        .waitForElementVisible('#pCountdown', 5000) // the so called "Idozar" countdown in the upper right corner
+        .waitForElementVisible('#pCountdown', 15000) // the so called "Idozar" countdown in the upper right corner
         .waitForElementVisible('a[title="Mérőállás"]', 15000)
   },
   'navigate to meter report page': function (client) {
@@ -29,10 +30,10 @@ module.exports = {
   'fill the current meter value and submit the form': function (client) {
     client
         .click('td.urBorderBox input[type=text]')
-        .waitForElementVisible('input[title*="Leolvasott mérőállás oszlop"]', 1000) // added dynamically
+        .waitForElementVisible('input[title*="mérőállás"]', 100000) // added dynamically
         .setValue('td.urBorderBox input[type=text]', value)
         .useXpath()
-        .click('//a/span[text()="Rögzítés"]/..')
+        .click('//a/span[text()="Mentés"]/..')
         .useCss()
         .pause(5000)
         .end()
