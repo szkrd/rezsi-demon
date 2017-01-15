@@ -24,3 +24,7 @@ ELMU_PASSWORD=8bee60d2cf25245347
 ### electricity, report
 
 ` SECRET=F00B@rB@z VALUE=12000 npm run elmu-meroallas`
+
+### gas, report
+
+Not working. The _főgáz_ site is so fucked up, I may or may not implement this e2e suite.
